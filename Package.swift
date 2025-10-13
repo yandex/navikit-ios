@@ -19,8 +19,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "YandexMapsMobileNavikit",
-            url: "https://maps-ios-pods-public.s3.yandex.net/YandexMapsMobile-4.24.0-navikit.framework.zip",
-            checksum: "4fa5ca291f2e5e0de4c697562d6355d7d6dbf7bb550b6b08ab3075ddd8aff32d"
+            url: "https://maps-ios-pods-public.s3.yandex.net/YandexMapsMobile-4.17.1-navikit.framework.zip",
+            checksum: "1f22c6a374ab9fe113fcb9c7fabac2ecb3e07ea4139c81552db85a66e36e0642"
         ),
         .target(
             name: "YandexMapsMobileNavikitResources",
@@ -39,7 +39,6 @@ let package = Package(
                 .linkedFramework("CoreTelephony"),
                 .linkedFramework("CoreMotion"),
                 .linkedFramework("DeviceCheck"),
-                .linkedFramework("NetworkExtension"),
                 .linkedLibrary("resolv"),
                 .linkedLibrary("c++"),
             ]
