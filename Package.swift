@@ -19,17 +19,19 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "YandexMapsMobileNavikit",
-            url: "https://maps-ios-pods-public.s3.yandex.net/YandexMapsMobile-4.45.0-navikit.framework.zip",
-            checksum: "93c041d5e5525a1e88444f6a70d164c78180bf34d16704c94c6ea72ede24e9ff"
+            url: "https://maps-ios-pods-public.s3.yandex.net/YandexMapsMobile-4.47.0-navikit.framework.zip",
+            checksum: "3971f1d6c3891502e8f8d773e7eef16c6b5f43c31104d39628a3343878bc3911"
         ),
         .target(
             name: "YandexMapsMobileNavikitResources",
             path: "Resources",
-            resources: [.process("Contents")],
+            resources: [.copy("Contents.bundle")],
             linkerSettings: [
+                .linkedFramework("AVFoundation"),
                 .linkedFramework("CoreFoundation"),
                 .linkedFramework("Foundation"),
                 .linkedFramework("CoreLocation"),
+                .linkedFramework("CoreMedia"),
                 .linkedFramework("UIKit"),
                 .linkedFramework("OpenGLES"),
                 .linkedFramework("SystemConfiguration"),
